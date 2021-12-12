@@ -477,6 +477,9 @@ img{
     }
 
 }
+.show_off_img{
+  display: block;
+}
 @media  (min-width: 360px) {
   .show_off_img {
   display: none;
@@ -487,9 +490,7 @@ img{
     justify-content: space-evenly;
   }
 }
-.show_off_img{
-  display: block;
-}
+
 @media (max-width: 320px) {
   .show_off_img {
    display: none; 
