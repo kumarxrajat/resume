@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        .show_on{
+    display: block;
+        }
+        .show_off{
+            display: none;
+        }
+        .btnGoBack{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    </style>
+    <script>
+      
+        function func()
+         {
+             document.getElementById('hireshow').classList.remove("show_off")
+             document.getElementById('hireshow').classList.add("show_on")
+         }
+        function removefunc()
+        {
+            document.getElementById('hireshow').classList.remove("show_on")
+             document.getElementById('hireshow').classList.add("show_off")
+           
+        }
+      </script>
+    <title>Contact</title>
+</head>
+<body>
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="main.html" class="nav__logo" style="font-size: 30px;color:blue">Rajat Kumar</a>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="resume.html" class="nav__link ">Home</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link active">Contact Me</a></li>
+                    <li class="nav__item"><a href="honesty.html" class="nav__link">Honesty</a></li>
+
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+
+     <section class="contact section" id="contact">
+                <h2 class="section-title">Contact</h2>
+
+                <div class="contact__container bd-grid">
+                    <form action="https://formspree.io/f/mwkykodz" method="POST" class="contact__form">
+                        <input type="text" name="name" placeholder="Name" class="contact__input" required>
+                        <input type="mail" name="email" placeholder="Email" class="contact__input" required>
+                        <input type="address" name="address" placeholder="City" class="contact__input" required>
+                        <input type="number" name="number" placeholder="Postal code" class="contact__input" required>
+                          <input type="radio" name="radio" id="Question" name="form" value="Question" onclick="removefunc()">
+                          <label for="Question">Question</label><br>
+                          <input type="radio" name="radio" id="comment" name="form" value="comment" onclick="removefunc()">
+                          <label for="comment">Comment</label><br>
+                          <input type="radio" name="radio" id="hiring" name="form" value="hiring" onclick="func()">
+                          <label for="hiring">Hiring</label>
+                        <br> 
+                           <div id="hireshow" class="show_hiring show_off">
+                            <input type="rate" name="number" placeholder="Hiring Rate/hour" class="contact__input">
+                           </div>   
+                        <br>                    
+                        <textarea name="text" id="" cols="0" rows="10" class="contact__input" required></textarea>
+                      
+                        <!-- <input type="button" value="Send" > -->
+                    <button style="background-color: blue; padding: 20px;color: white;">Send</button>
+                    </form>
+                </div>
+            </section>
+            <footer class="footer">
+                <p class="footer__title">Rajat</p>
+                <div class="footer__social">
+                    <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
+                    <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+                    <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
+                </div>
+                <p>&copy; 2020 copyright all right reserved to mr Rajat</p>
+            </footer>  
+            <script src="assets/js/main.js"></script>
+      
+</body>
+</html>
