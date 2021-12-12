@@ -477,6 +477,29 @@ img{
     }
 
 }
+@media  (min-width: 360px) {
+  .show_off_img {
+  display: none;
+  }
+  .grid-lying{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+.show_off_img{
+  display: block;
+}
+@media (max-width: 320px) {
+  .show_off_img {
+   display: none; 
+ }
+ .grid-lying{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+} 
 @media screen and(min-width: 1024px){
     .bd-grid{
         margin-left: auto;
